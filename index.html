@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class=" bg-slate-200">
+
+    <div class="mt-20">
+        <h1 class="text-3xl font-bold text-center">To-Do List</h1>
+
+        <div class="mt-10">
+            <div class="flex justify-center ">
+                <div class="w-[30%] h-80 bg-white rounded-lg shadow-slate-400 shadow-lg">
+                    <div class="ml-10 mt-10">
+                        <h1 class="text-2xl font-semibold mb-4">Create To Do</h1>
+                        <div class="flex flex-col">
+                            <label for="task" class="text-md">Task :</label>
+                            <input type="text" name="task" id="task" class=" border-2 h-8 w-[31rem] border-slate-300 rounded pl-3 text-md" placeholder="Enter task" required>
+                        </div>
+                        <div class="flex flex-col mt-2">
+                            <label for="deadline" class="text-md">Deadline :</label>
+                            <input type="date" name="deadline" id="task" class=" border-2 h-8 w-[31rem] border-slate-300 rounded pl-3 text-md"  required>
+                        </div>
+                        <button id="createBtn" class="px-5 rounded border-green-500 text-green-600 py-2 text-md border-2 hover:text-white hover:bg-green-500  mt-6">Create</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-12">
+                <div class="w-[30%] h-80 bg-white rounded-lg shadow-slate-400 shadow-lg">
+                    <div class="ml-10 mt-10">
+                        <h1 class="text-2xl font-semibold mb-4">To-Do List</h1>
+
+                        <div class="mt-5">
+                            <div class=" w-[35rem]">
+                                <h2 class="2"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
