@@ -7,44 +7,64 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class=" bg-slate-200">
-
-    <div class="mt-20">
-        <h1 class="text-3xl font-bold text-center">To-Do List</h1>
-
-        <div class="mt-10">
-            <div class="flex justify-center ">
-                <div class="w-[30%] h-80 bg-white rounded-lg shadow-slate-400 shadow-lg">
-                    <div class="ml-10 mt-10">
-                        <h1 class="text-2xl font-semibold mb-4">Create To Do</h1>
+    
+    <div id="modal" class="absolute w-full h-full -mt-20 hidden opacity-0 transition-all duration-300 ease-in-out" style="background-color: rgba(0, 0, 0, 0.6);backdrop-filter: blur(8px);" >
+            <div class="flex justify-center mt-64 ">
+                <div class=" bg-white w-[30%] rounded-lg h-96 shadow-slate-400 shadow-lg ">
+                    <div class="ml-10 pt-10">
+                        <h1 class="text-3xl font-bold mb-4" id="modalTitle">Create To Do</h1>
                         <div class="flex flex-col">
                             <label for="task" class="text-md">Task :</label>
-                            <input type="text" name="task" id="task" class=" border-2 h-8 w-[31rem] border-slate-300 rounded pl-3 text-md" placeholder="Enter task" required>
+                            <input type="text" name="task" id="taks" class=" border-2 h-8 w-[31rem] border-slate-300 rounded pl-3 text-md" placeholder="Enter task" required>
                         </div>
                         <div class="flex flex-col mt-2">
                             <label for="deadline" class="text-md">Deadline :</label>
-                            <input type="date" name="deadline" id="task" class=" border-2 h-8 w-[31rem] border-slate-300 rounded pl-3 text-md"  required>
+                            <input type="date" name="deadline" id="deadline" class=" border-2 h-8 w-[31rem] border-slate-300 rounded pl-3 text-md"  required>
                         </div>
-                        <button id="createBtn" class="px-5 rounded border-green-500 text-green-600 py-2 text-md border-2 hover:text-white hover:bg-green-500  mt-6">Create</button>
+                        <button id="submitBtn" type="button" class="px-5 rounded border-green-500 text-green-600 py-2 text-md border-2 hover:text-white hover:bg-green-500  mt-6">Create</button>
                     </div>
                 </div>
             </div>
+    </div>
 
+    <div class="mt-20 mb-10">
+        <h1 class="text-5xl font-bold text-center">To-Do List</h1>
+        
+        <div class="mt-10">
+            
             <div class="flex justify-center mt-12">
-                <div class="w-[30%] h-80 bg-white rounded-lg shadow-slate-400 shadow-lg">
-                    <div class="ml-10 mt-10">
-                        <h1 class="text-2xl font-semibold mb-4">To-Do List</h1>
+                <div class="w-[60%] h-80 bg-white rounded-lg shadow-slate-400 shadow-lg min-h-min">
+                    <div class="ml-10 mt-10 mr-10 flex justify-between">
+                        <h1 class="text-3xl font-bold mb-4">To-Do List</h1>
+                        <button id="openCreateBtn" class="px-7 rounded hover:bg-green-100 hover:text-green-600 py-1 text-md border-2 text-white bg-green-500  ">Create</button>
+                    </div>
 
-                        <div class="mt-5">
-                            <div class=" w-[35rem]">
-                                <h2 class="2"></h2>
+                        <div class="mt-10">
+                            <div class=" pl-10 w-full grid grid-flow-col grid-cols-12 pt-5  pr-8 border-b py-2">
+                                <div class="col-span-1">
+                                </div>
+                                <div class=" col-span-5">
+                                    <p id="taskName" class="text-md font-bold ">Task Name</p>
+                                </div>
+                                <div class=" col-span-5">
+                                    <p id="deadline" class="tect-md font-bold ">Deadline</p>
+                                </div>
+                                <div class=" col-span-1">
+                                    <p class="tect-md font-bold ">Action</p>
+                                </div>
+                            </div>
+                            
+                            <div id="container">
+                                <!-- Content -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
